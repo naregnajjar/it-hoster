@@ -1,0 +1,784 @@
+/* Start General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+:root {
+    --pink: #eb2b63;
+    --white: #fff;
+    --gray:#777;
+    --lightGray:#ddd9d9;
+    --darkPink:#9e2d4b;
+    --violet:#eb2bae;
+    --darkViolet:#910464;
+    --violet2:#d22beb;
+    --darkViolet2:#690379;
+    --violet3:#972beb;
+    --darkViolet3:#35025c;
+    --violet4:#732beb;
+    --darkViolet4:#25035c;
+    --blue:#200545;
+    --darkBlue:#1b043b;
+}
+body {
+    background-color: var(--white);
+}
+ul {
+    list-style-type: none;
+}
+a {
+    text-decoration: none;
+}
+/* End General Styles */
+
+/* Start Common CSS Styles Between Sections */
+.container {
+    width: 90%;
+    margin: auto;
+}
+.pd-y {
+    padding: 100px 0;
+}
+.top-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.top-title img {
+    margin-bottom: 10px;
+}
+.top-title span {
+    color: var(--gray);
+    margin-bottom: 10px;
+}
+.top-title h2 {
+    font-size: 50px;
+    margin-bottom: 80px;
+}
+
+.clear {
+    clear: both;
+}
+
+.ltr-effect {
+    position: relative;
+}
+.ltr-effect::after {
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    width: 0%;
+    z-index: -1;
+    background-image: linear-gradient(to bottom right , red,blue);
+    transition: width 0.5s;
+    -webkit-transition: width 0.5s;
+    -moz-transition: width 0.5s;
+    -ms-transition: width 0.5s;
+    -o-transition: width 0.5s;
+}
+.ltr-effect:hover::after {
+    width: 100%;
+}
+/* End Common CSS Styles Between Sections */
+
+/* Start CSS to Header Section */
+header {
+    background-image: url(../images/bg.jpg.webp);
+    height: auto;
+    background-size: cover;
+    background-position: center;
+    padding-bottom: 120px;
+}
+header .container nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 35px 0 120px 0;
+}
+header .container nav .logo {
+    width: 30%;
+}
+header .container nav .logo img {
+    width: 33%;
+    cursor: pointer;
+}
+header .container nav .links {
+    width: 70%;
+    text-align: right;
+}
+header .container nav .links li {
+    display: inline-block;
+    padding: 0 12px;
+}
+header .container nav .links li a {
+    text-transform: capitalize;
+    color: var(--white);
+    font-size: 16px;
+    display: block;
+    padding: 10px;
+    transition: color 0.5s;
+    -webkit-transition: color 0.5s;
+    -moz-transition: color 0.5s;
+    -ms-transition: color 0.5s;
+    -o-transition: color 0.5s;
+}
+header .container nav .links li a:hover {
+    color: var(--pink);
+}
+header .container nav .links li:last-child a {
+    width: 160px;
+    height: 38px;
+    font-size: 15px;
+    text-align: center;
+    background-color: var(--pink);
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    transition: color 0.5s , ;
+    -webkit-transition: color 0.5s , background-color 0.5s ;
+    -moz-transition: color 0.5s , ;
+    -ms-transition: color 0.5s , ;
+    -o-transition: color 0.5s , ;
+}
+header .container nav .links li:last-child a:hover {
+    color: var(--pink);
+    background-color: var(--white);
+}
+header .container .header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .container .header-content .header-item:first-child {
+    width: 60%;
+    padding-left: 45px;
+}
+header .container .header-content .header-item:first-child h1 {
+    color: var(--white);
+    font-size: 95px;
+    width: 530px;
+    line-height: 1;
+    text-transform: capitalize;
+    margin-bottom: 10px;
+    letter-spacing: 2.2px;
+}
+header .container .header-content .header-item:first-child p {
+    color: var(--white);
+    font-size: 18px;
+    letter-spacing: 1.2px;
+    width: 570px;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+header .container .header-content .header-item:first-child button {
+    background-color: var(--pink);
+    color: var(--white);
+    width: 180px;
+    height: 45px;
+    text-transform: capitalize;
+    font-size: 16px;
+    margin-bottom: 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    transition: color 0.5s ,background-color 0.5s ;
+    -webkit-transition: color 0.5s ,background-color 0.5s ;
+    -moz-transition: color 0.5s ,background-color 0.5s ;
+    -ms-transition: color 0.5s ,background-color 0.5s ;
+    -o-transition: color 0.5s ,background-color 0.5s ;
+}
+header .container .header-content .header-item:first-child button:hover {
+    color: var(--pink);
+    background-color: var(--white);
+}
+header .container .header-content .header-item:nth-child(2) {
+    width: 40%;
+    text-align: right;
+}
+header .container .header-content .header-item img {
+    max-width: 100%;
+    animation-name: move;
+    animation-duration: 4s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+@keyframes move {
+    0% {
+        transform: translate(0px , 0px);
+        -webkit-transform: translate(0px , 0px);
+        -moz-transform: translate(0px , 0px);
+        -ms-transform: translate(0px , 0px);
+        -o-transform: translate(0px , 0px);
+}
+    25% {
+        transform: translate(25px , 25px);
+        -webkit-transform: translate(25px , 25px);
+        -moz-transform: translate(25px , 25px);
+        -ms-transform: translate(25px , 25px);
+        -o-transform: translate(25px , 25px);
+}
+    50% {
+        transform: translate(-25px , 25px);
+        -webkit-transform: translate(-25px , 25px);
+        -moz-transform: translate(-25px , 25px);
+        -ms-transform: translate(-25px , 25px);
+        -o-transform: translate(-25px , 25px);
+}
+    75% {
+        transform: translate(-25px , 0px);
+        -webkit-transform: translate(-25px , 0px);
+        -moz-transform: translate(-25px , 0px);
+        -ms-transform: translate(-25px , 0px);
+        -o-transform: translate(-25px , 0px);
+}
+    100% {
+        transform: translate(0px , 0px);
+        -webkit-transform: translate(0px , 0px);
+        -moz-transform: translate(0px , 0px);
+        -ms-transform: translate(0px , 0px);
+        -o-transform: translate(0px , 0px);
+}
+}
+/* End CSS to Header Section */
+
+/* start CSS to Features Section */
+.features .container .item {
+    float: left;
+    width: 32%;
+    text-align: center;
+    padding: 35px 30px;
+    margin-bottom: 20px;
+    border: 1px solid var(--lightGray);
+    transition: color 0.5s , background-color 0.5s border 0.5s;
+    -webkit-transition: color 0.5s , background-color 0.5s border 0.5s;
+    -moz-transition: color 0.5s , background-color 0.5s border 0.5s;
+    -ms-transition: color 0.5s , background-color 0.5s border 0.5s;
+    -o-transition: color 0.5s , background-color 0.5s border 0.5s;
+} 
+.features .container .item:nth-child(3) {
+    padding:  35px 30px 20px  30px;
+}
+.features .container .item:nth-child(6) {
+    padding: 45px 30px 50px 30px;
+}
+.features .container .item.mg {
+    margin: 0  2%;
+}
+.features .container .item i {
+    font-size: 23px;
+    color: var(--white);
+    background-color: var(--pink);
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    margin-bottom: 25px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+.features .container .item:nth-child(3) i {
+    font-size: 32px;
+    color: var(--white);
+    background-color: var(--pink);
+    width: 90px;
+    height: 90px;
+    line-height: 90px;
+}
+.features .container .item h3 {
+    margin-bottom: 15px;
+    font-size: 25px;
+    transition: color 0.5s;
+    -webkit-transition: color 0.5s;
+    -moz-transition: color 0.5s;
+    -ms-transition: color 0.5s;
+    -o-transition: color 0.5s;
+}
+.features .container .item p {
+    color: var(--gray);
+    line-height: 1.7;
+    letter-spacing: 1.4px;
+    font-size: 14px;
+    transition: color 0.5s;
+    -webkit-transition: color 0.5s;
+    -moz-transition: color 0.5s;
+    -ms-transition: color 0.5s;
+    -o-transition: color 0.5s;
+}
+.features .container .item:hover i {
+    color: var(--pink);
+    background-color: var(--white);
+    border: 2px solid var(--pink);
+}
+.features .container .item:hover h3 {
+    color: var(--white);
+}
+.features .container .item:hover p {
+    color: var(--white);
+}
+/* End CSS to Features Section */
+
+/* Start CSS to Domain Section */
+.domain {
+    background-image: url(../images/bg.jpg.webp);
+    background-size: cover;
+    background-attachment: fixed;
+    height: 450px;
+    margin-bottom: 100px;
+    padding: 70px 0;
+}
+.domain .container .top-title h2 {
+    color: var(--white);
+    margin-bottom: 50px;
+}
+.domain .container form {
+    text-align: center;
+}
+.domain .container form input {
+    display: inline-block;
+    padding: 10px 20px;
+    text-transform: capitalize;
+    font-size: 17px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+.domain .container form input:first-child {
+    width: 60%;
+    height: 55px;
+    margin-right: 1%;
+}
+.domain .container form input:last-child {
+    width: 20%;
+    height: 55px;
+    color: var(--white);
+    background-color: var(--pink);
+    cursor: pointer;
+    transition:  color 0.2s , background-color 0.2s;
+    -webkit-transition:  color 0.2s , background-color 0.2s;
+    -moz-transition:  color 0.2s , background-color 0.2s;
+    -ms-transition:  color 0.2s , background-color 0.2s;
+    -o-transition:  color 0.2s , background-color 0.2s;
+}
+.domain .container form input:last-child:hover {
+    background-color: var(--white);
+    color: var(--pink);
+}
+.domain .container form + p {
+    text-align: center;
+    color: var(--gray);
+}
+/* End CSS to Domain Section */
+
+/* Start CSS to Services Section */
+.services .container .services-content {
+    display: flex;
+}
+.services .container .services-content .services-item {
+    width: 49%;
+    position: relative;
+}
+.services .container .services-content .services-item:first-child {
+    margin-right: 2%;
+}
+.services .container .services-content .services-item .item {
+    margin-bottom: 30px;
+}
+.services .container .services-content .services-item .item .top {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin-bottom: 5px;
+}
+.services .container .services-content .services-item .item .top span {
+    font-size: 20px;
+}
+.services .container .services-content .services-item .item .bottom {
+    background-color: var(--lightGray);
+    width: 90%;
+    height: 18px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    position: relative;
+}
+.services .container .services-content .services-item .item .bottom .layer {
+    position: absolute;
+    top: 3px;
+    left: 4px;
+    height: 12px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+.services .container .services-content .services-item .item:first-child .bottom .layer {
+    background-image: linear-gradient(to right ,var(--darkPink) ,var(--pink));
+}
+.services .container .services-content .services-item .item:nth-child(3) .bottom .layer {
+    background-image: linear-gradient(to right ,var(--darkViolet2) ,var(--violet2));
+}
+.services .container .services-content .services-item .item:first-child .bottom .layer ,
+.services .container .services-content .services-item .item:nth-child(3) .bottom .layer {
+    width: 80%;
+}
+.services .container .services-content .services-item .item:nth-child(2) .bottom .layer {
+    width: 90%;
+    background-image: linear-gradient(to right ,var(--darkViolet) ,var(--violet));
+
+}
+.services .container .services-content .services-item .item:nth-child(4) .bottom .layer {
+    width: 60%;
+    background-image: linear-gradient(to right ,var(--darkViolet3) ,var(--violet3));
+}
+.services .container .services-content .services-item .item:last-child .bottom .layer {
+    width: 70%;
+    background-image: linear-gradient(to right ,var(--darkViolet4) ,var(--violet4));
+}
+.services .container .services-content .services-item p {
+    width: 86%;
+    height: 165px;
+    padding: 28px 30px 22px 30px;
+    margin-bottom: 50px;
+    background-color: var(--lightGray);
+    font-size: 16px;
+    color: var(--gray);
+    border-radius: 10px;
+    line-height: 1.7;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    position: relative;
+}
+.services .container .services-content .services-item p::after {
+    content: "";
+    position: absolute;
+    bottom: -50px;
+    right: 35px;
+    border-width: 25px;
+    border-color: var(--lightGray) transparent transparent transparent;
+    border-style: solid ;
+}
+.services .container .services-content .services-item .info {
+    display: flex;
+    position: absolute;
+    right: 85px;
+    bottom: 55px;
+}
+.services .container .services-content .services-item .info .text {
+    padding-top: 25px;
+    text-align: right;
+}
+.services .container .services-content .services-item .info .text  h3 {
+    margin: 0 30px 10px 0;
+}
+.services .container .services-content .services-item .info .text span{
+    padding-right: 30px;
+    color: var(--pink);
+    font-weight: bold;
+}
+.services .container .services-content .services-item .info img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+/* End CSS to Services Section */
+
+/* Start CSS to News Section */
+.news .container .news-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.news .container .news-content .news-item {
+    width: 32%;
+    cursor: pointer;
+}
+.news .container .news-content .news-item:hover .item {
+    border: 3px solid var(--pink);
+}
+.news .container .news-content .news-item:hover h3 {
+    background-image: linear-gradient(to right ,var(--darkViolet2) ,var(--violet2));
+}
+.news .container .news-content .news-item.mg {
+    margin: 0 2%;
+}
+.news .container .news-content .news-item h3 {
+    width: 100%;
+    height: 55px;
+    line-height: 55px;
+    background-color: var(--pink);
+    color: var(--white);
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    margin-bottom: 20px;
+    transition: background-image 0.5s;
+    -webkit-transition: background-image 0.5s;
+    -moz-transition: background-image 0.5s;
+    -ms-transition: background-image 0.5s;
+    -o-transition: background-image 0.5s;
+}
+.news .container .news-content .news-item .item {
+    padding: 50px 30px;
+    border: 1px solid var(--lightGray);
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}
+.news .container .news-content .news-item .item .dollar {
+    font-size: 18px;
+    color: var(--gray);
+    font-weight: 100;
+    margin-bottom: 30px;
+}
+.news .container .news-content .news-item .item .dollar span {
+    font-size: 50px;
+    font-weight: 600;
+}
+.news .container .news-content .news-item .item .list li {
+    margin-bottom: 35px;
+    color: var(--gray);
+    font-size: 18px;
+} 
+.news .container .news-content .news-item .item .link {
+    width: 70%;
+    height: 50px;
+    line-height: 50px;
+    margin: auto;
+    display: block;
+    background-color: var(--pink);
+    color: var(--white);
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    transition: background-image 0.5s;
+    -webkit-transition: background-image 0.5s;
+    -moz-transition: background-image 0.5s;
+    -ms-transition: background-image 0.5s;
+    -o-transition: background-image 0.5s;
+}
+.news .container .news-content .news-item .item .link:hover {
+    background-image: linear-gradient(to right ,var(--darkViolet2) ,var(--violet2));
+}
+/* End CSS to News Section */
+
+/* Start CSS to Contact Section */
+.contact {
+    background-image: url(../images/banner-bg.jpg.webp);
+    height: 300px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    /* margin-bottom: 100px; */
+    padding: 120px 0;
+}
+.contact .container .content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.contact .container .content .text {
+    width: 68%;
+}
+.contact .container .content .text h3 {
+    font-size: 35px;
+    color: var(--white);
+    font-weight: 100;
+    margin-bottom: 10px;
+}
+.contact .container .content .text p {
+    color: var(--gray);
+}
+.contact .container .content button {
+    width: 15%;
+    height: 50px;
+    font-size: 16px;
+    color: var(--white);
+    border: none;
+    cursor: pointer;
+    background-color: var(--pink);
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    transition: color 0.5s,background-color 0.5s;
+    -webkit-transition: color 0.5s,background-color 0.5s;
+    -moz-transition: color 0.5s,background-color 0.5s;
+    -ms-transition: color 0.5s,background-color 0.5s;
+    -o-transition: color 0.5s,background-color 0.5s;
+}
+.contact .container .content button:hover{
+    color: var(--pink);
+    background-color: var(--white);
+}
+/* End CSS to Contact Section */
+
+/* Start CSS to Footer Section */
+footer {
+    height: 580px;
+    background-color: var(--blue);
+}
+footer .container .content {
+    display: flex;
+    justify-content: space-around;
+    padding: 100px 0;
+    /* align-items: center; */
+}
+footer .container .content .item {
+    width: 30%;
+}
+footer .container .content .item img {
+    margin-bottom: 40px;
+}
+footer .container .content .item p {
+    color: var(--gray);
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+footer .container .content .item > .list > li {
+    display: inline-block;
+    margin-right: 5px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    text-align: center;
+    line-height: 40px;
+    background-color: var(--darkViolet3);
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    transition: background-color 0.5s;
+    -webkit-transition: background-color 0.5s;
+    -moz-transition: background-color 0.5s;
+    -ms-transition: background-color 0.5s;
+    -o-transition: background-color 0.5s;
+} 
+footer .container .content .item > .list > li:hover {
+    background-color: var(--pink);
+}
+footer .container .content .item > .list > li i {
+    color: var(--white);
+}
+footer .container .content .item h3 {
+    color: var(--white);
+    font-size: 25px;
+    margin-bottom: 50px;
+    font-weight: 100;
+}
+footer .container .content .item:nth-child(2) .list {
+    display: flex;
+    justify-content: space-around;
+}
+footer .container .content .item:nth-child(2) .list .list-items li {
+    color: var(--gray);
+    margin-bottom: 15px;
+    cursor: pointer;
+    transition: color 0.5s;
+    -webkit-transition: color 0.5s;
+    -moz-transition: color 0.5s;
+    -ms-transition: color 0.5s;
+    -o-transition: color 0.5s;
+}
+footer .container .content .item:nth-child(2) .list .list-items li:hover {
+    color: var(--white);
+}
+footer .container .content .item .sub-item {
+    display: flex;
+}
+footer .container .content .item .sub-item img {
+    width: 60px;
+    height: 60px;
+    margin-right: 15px;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}
+footer .container .content .item .sub-item .info {
+    padding-top: 7px;
+}
+footer .container .content .item .sub-item .info h3 {
+    color: var(--gray);
+    margin-bottom: 3px;
+    font-size: 18px;
+}
+footer .container .content .item .sub-item .info span {
+    color: var(--pink);
+    font-size: 14px;
+}
+footer .copyright {
+    height: 70px;
+    background-color: var(--darkBlue);
+}
+.copyright .container .copyright-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 18px;
+}
+.copyright .container .copyright-content p {
+    width: 50%;
+    color: var(--gray);
+}
+.copyright .container .copyright-content .links {
+    width: 50%;
+    text-align: right;
+}
+.copyright .container .copyright-content .links li {
+    display: inline-block;
+    padding: 0 12px;
+}
+.copyright .container .copyright-content .links li a {
+    text-transform: capitalize;
+    color: var(--gray);
+    font-size: 16px;
+    display: block;
+    padding: 10px;
+    transition: color 0.5s;
+    -webkit-transition: color 0.5s;
+    -moz-transition: color 0.5s;
+    -ms-transition: color 0.5s;
+    -o-transition: color 0.5s;
+}
+.copyright .container .copyright-content .links li a:hover {
+    color: var(--pink);
+}
+/* End CSS to Footer Section */
